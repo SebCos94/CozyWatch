@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.10.0)
 
 # ######################################################################################################################
+# Macro and Functions
+# ######################################################################################################################
+
+include(${CMAKE_SOURCE_DIR}/tools/cmake_scripts/cmake_macros.cmake)
+
+# ######################################################################################################################
 # Configure scripts environment
 # ######################################################################################################################
 set(EXECUTABLE_EXTENSION "")
@@ -93,4 +99,7 @@ if(CMAKE_BUILD_ARCH STREQUAL "ARM")
         -nodefaultlibs  # Exclude default libraries
         -nostdlib       # Exclude standard libraries
     )
+
+    mcu_post_build(${TARGET})
+    
 endif()

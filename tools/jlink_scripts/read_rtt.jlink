@@ -1,0 +1,12 @@
+exec SilentUpdateFW
+exec SuppressInfoUpdateFW
+exec SuppressControlPanel
+exec DisableInfoWinFlashDL
+exec DisableInfoWinFlashBPs
+
+device R7FA4M2AD
+if SWD
+speed 20000
+connect
+mem32 0x000100A0 1
+quit

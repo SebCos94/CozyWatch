@@ -1,0 +1,13 @@
+exec SilentUpdateFW
+exec SuppressInfoUpdateFW
+exec SuppressControlPanel
+exec DisableInfoWinFlashDL
+exec DisableInfoWinFlashBPs
+
+Exec DEVICE_SelectLoader BankAddr=0x60000000 Loader=CLK@P100_nCS@P112_D0@P102_D1@P101_D2@P104_D3@P103
+
+reset
+halt
+loadfile "fw/build/ARM/CozyWatch.hex"
+go
+quit

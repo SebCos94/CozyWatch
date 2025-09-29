@@ -209,7 +209,7 @@
 			{
 				"name": "ARM: Debug",
 				"cwd": "${workspaceRoot}",
-				"executable": "${workspaceRoot}/fw/build/ARM/AS-LX04.elf",
+				"executable": "${workspaceRoot}/fw/build/ARM/CozyWatch.elf",
 				"request": "launch",
 				"type": "cortex-debug",
 				"servertype": "jlink",
@@ -226,7 +226,7 @@
 				"interface": "swd",
 				"runToEntryPoint": "main",
 				"preLaunchTask": "ARM: Build",
-				"svdFile": "${workspaceRoot}/Tools/SVD/R7FA4M2AD.svd",
+				"svdFile": "${workspaceRoot}/tools/SVD/R7FA4M2AD.svd",
 				"serverArgs": [
 					"-speed",
 					"20000"
