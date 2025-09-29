@@ -1,0 +1,41 @@
+file(GLOB_RECURSE SOURCE_LIST
+    "${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/*.c"
+    "${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/*.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/*.h"
+)
+
+list(APPEND RENESAS_SOURCE_DIR_LIST
+    ${CMAKE_CURRENT_LIST_DIR}/    
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra/fsp/inc/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra/fsp/inc/api/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra/fsp/inc/instances/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra/arm/CMSIS_6/CMSIS/Core/Include/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra/fsp/src/bsp/cmsis/Device/RENESAS/Include/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra_gen/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra_cfg/driver/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra_cfg/fsp_cfg/bsp/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra_cfg/fsp_cfg/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra/fsp/src/bsp/mcu/ra4m2/
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/ra/fsp/src/bsp/mcu/all/
+
+    ${CMAKE_CURRENT_LIST_DIR}/EKRA4M2/${CMAKE_BUILD_TYPE}/
+)
+
+add_library(EKRA4M2 STATIC ${SOURCE_LIST})
+
+# Preprocessor definitions
+target_compile_definitions(EKRA4M2 PUBLIC
+    _RENESAS_RA_
+    _RA_CORE=CM33
+    _RA_ORDINAL=1   
+)
+
+target_include_directories(EKRA4M2 PUBLIC ${RENESAS_SOURCE_DIR_LIST})
+
+# file(GLOB_RECURSE DISABLE_WARNINGS_FILE_LIST CONFIGURE_DEPENDS
+#     ${CMAKE_CURRENT_LIST_DIR}/*.c
+#     ${CMAKE_CURRENT_LIST_DIR}/*.h
+# )
+
+# disable_all_warning_file_list(RENESAS_RA DISABLE_WARNINGS_FILE_LIST)

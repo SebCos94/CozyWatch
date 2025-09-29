@@ -1,0 +1,241 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cortex-debug.armToolchainPath.linux": "/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin",
+		"cortex-debug.armToolchainPath.osx": "/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin",
+		"cortex-debug.armToolchainPath.windows": "${env:GCC_ARM_BIN_PATH}",
+		"cortex-debug.variableUseNaturalFormat": true,
+		"C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
+		"C_Cpp.errorSquiggles": "disabled",
+		"C_Cpp.autoAddFileAssociations": false,
+		"C_Cpp.default.intelliSenseMode": "gcc-arm",
+		"C_Cpp.default.includePath": [
+			"${workspaceFolder}/**"
+		],
+		"C_Cpp.default.defines": [
+			"_DEBUG",
+			"UNICODE",
+			"_UNICODE"
+		],
+		"C_Cpp.default.cStandard": "c99",
+		"C_Cpp.default.cppStandard": "c++11",
+		"C_Cpp.default.compilerArgs": [
+			"-D_RENESAS_RA_",
+			"-D_RA_CORE=CM33",
+			"-D_RA_ORDINAL=1",
+		],
+		"cSpell.enabled": false,
+		"editor.formatOnSave": true,
+		"search.exclude": {
+			"/build": true,
+			"/coverage": true
+		},
+		"C_Cpp.files.exclude": {
+			"**/mocks": true
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"streetsidesoftware.code-spell-checker",
+			"dan-c-underwood.arm",
+			"twxs.cmake",
+			"marus25.cortex-debug",
+			"bbenoist.doxygen",
+			"ms-vscode.vscode-embedded-tools",
+			"zixuanwang.linkerscript",
+			"ms-vscode.vscode-serial-monitor"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Clean",
+				"type": "shell",
+				"windows": {
+					"command": "${workspaceFolder}/tools/cmd_scripts/clean_dir.bat",
+					"args": [
+						"${workspaceFolder}/fw/build"
+					]
+				},
+				"osx": {
+					"command": "bash",
+					"args": [
+						"../../tools/cmd_scripts/clean_dir.sh",
+						"${workspaceFolder}/fw/build"
+					]
+				},
+				"linux": {
+					"command": "bash",
+					"args": [
+						"../../tools/cmd_scripts/clean_dir.sh",
+						"${workspaceFolder}/fw/build"
+					]
+				},
+				"options": {
+					"cwd": "${workspaceFolder}/fw/build"
+				},
+				"presentation": {
+					"clear": true
+				},
+				"problemMatcher": []
+			},
+			{
+				"label": "ARM: Configure DEBUG",
+				"type": "shell",
+				"windows": {
+					"command": "&'${env:CMAKE_PATH}/cmake.exe'"
+				},
+				"osx": {
+					"command": "cmake"
+				},
+				"linux": {
+					"command": "cmake"
+				},
+				"args": [
+					"-GNinja",
+					"-DCMAKE_BUILD_TYPE:STRING='Debug'",
+					"-DCMAKE_BUILD_ARCH:STRING='ARM'",
+					"../../../"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/fw/build/ARM"
+				},
+				"presentation": {
+					"clear": true
+				},
+				"problemMatcher": []
+			},
+			{
+				"label": "ARM: Configure RELEASE",
+				"type": "shell",
+				"windows": {
+					"command": "&'${env:CMAKE_PATH}/cmake.exe'"
+				},
+				"osx": {
+					"command": "cmake"
+				},
+				"linux": {
+					"command": "cmake"
+				},
+				"args": [
+					"-GNinja",
+					"-DCMAKE_BUILD_TYPE:STRING='Release'",
+					"-DCMAKE_BUILD_ARCH:STRING='ARM'",
+					"-DCMAKE_BUILD_BOARD:STRING='AS-LX04'",
+					"../../"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/fw/build/ARM"
+				},
+				"presentation": {
+					"clear": true
+				},
+				"problemMatcher": []
+			},
+			{
+				"label": "ARM: Build",
+				"type": "shell",
+				"windows": {
+					"command": "&'${env:CMAKE_PATH}/cmake.exe'"
+				},
+				"osx": {
+					"command": "cmake"
+				},
+				"linux": {
+					"command": "cmake"
+				},
+				"args": [
+					"--build",
+					".",
+					"-j"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/fw/build/ARM"
+				},
+				"presentation": {
+					"clear": true
+				},
+				"problemMatcher": {
+					"base": "$gcc",
+					"source": "doxygen",
+					"fileLocation": [
+						"relative",
+						""
+					]
+				},
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				}
+			},
+			{
+				"label": "ARM: Program Device",
+				"detail": "Flashes the RA4M2 microcontroller using J-Link - SWD",
+				"type": "shell",
+				"windows": {
+					"command": "&'${env:JLINK_PATH}/JLink.exe'"
+				},
+				"osx": {
+					"command": "/Applications/SEGGER/JLink/JLinkExe"
+				},
+				"linux": {
+					"command": "/opt/SEGGER/JLink/JLinkExe"
+				},
+				"args": [
+					"-device",
+					"R7FA4M2AD",
+					"-if",
+					"SWD",
+					"-speed",
+					"4000",
+					"-autoconnect",
+					"1",
+					"-CommanderScript",
+					"${workspaceFolder}/tools/jlink_scripts/flash_script.jlink"
+				],
+				"problemMatcher": []
+			},
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "ARM: Debug",
+				"cwd": "${workspaceRoot}",
+				"executable": "${workspaceRoot}/fw/build/ARM/AS-LX04.elf",
+				"request": "launch",
+				"type": "cortex-debug",
+				"servertype": "jlink",
+				"windows": {
+					"serverpath": "${env:JLINK_PATH}/JLinkGDBServerCL.exe"
+				},
+				"osx": {
+					"serverpath": "/Applications/SEGGER/JLink/JLinkGDBServerCLExe"
+				},
+				"linux": {
+					"serverpath": "/opt/SEGGER/JLink/JLinkGDBServerCLExe"
+				},
+				"device": "R7FA4M2AD",
+				"interface": "swd",
+				"runToEntryPoint": "main",
+				"preLaunchTask": "ARM: Build",
+				"svdFile": "${workspaceRoot}/Tools/SVD/R7FA4M2AD.svd",
+				"serverArgs": [
+					"-speed",
+					"20000"
+				],
+				"postLaunchCommands": [
+					"monitor reset halt",
+				]
+			},
+		],
+		"compounds": []
+	}
+}
