@@ -12,7 +12,7 @@
     <option key="#FSPVersion#" value="6.1.0"/>
     <option key="#ConfigurationFragments#" value="Renesas##BSP##Board##ra4m2_ek##"/>
     <option key="#SELECTED_TOOLCHAIN#" value="gcc-arm-embedded"/>
-    <option key="#ToolchainVersion#" value="13.2.1.arm-13-7"/>
+    <option key="#ToolchainVersion#" value=""/>
   </generalSettings>
   <raBspConfiguration/>
   <raClockConfiguration>
@@ -96,6 +96,7 @@
       <configSetting altId="qspi0.qssl.p306" configurationId="qspi0.qssl" peripheral="QSPI0"/>
       <configSetting altId="sci0.ctsrts.p413" configurationId="sci0.ctsrts" isUsedByDriver="true" peripheral="SCI0"/>
       <configSetting altId="sci0.rxd.p100" configurationId="sci0.rxd" isUsedByDriver="true" peripheral="SCI0"/>
+      <configSetting altId="sci0.sck.p412" configurationId="sci0.sck" isUsedByDriver="true" peripheral="SCI0"/>
       <configSetting altId="sci0.txd.p101" configurationId="sci0.txd" isUsedByDriver="true" peripheral="SCI0"/>
       <configSetting altId="sci2.scl.p113" configurationId="sci2.scl" peripheral="SCI2"/>
       <configSetting altId="sci2.sda.p112" configurationId="sci2.sda" peripheral="SCI2"/>

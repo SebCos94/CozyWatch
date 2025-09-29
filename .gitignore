@@ -42,3 +42,4 @@
 
 # output
 build/
+.settings/
