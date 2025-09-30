@@ -290,10 +290,10 @@
     <symbolicName propertyId="p015.symbolic_name" value="ARDUINO_A5"/>
     <symbolicName propertyId="p100.symbolic_name" value="ARDUINO_RX_MIKROBUS_RX"/>
     <symbolicName propertyId="p101.symbolic_name" value="ARDUINO_TX_MIKROBUS_TX"/>
-    <symbolicName propertyId="p102.symbolic_name" value="ARDUINO_D8"/>
-    <symbolicName propertyId="p103.symbolic_name" value="ARDUINO_D6"/>
+    <symbolicName propertyId="p102.symbolic_name" value="DISPLAY_DC"/>
+    <symbolicName propertyId="p103.symbolic_name" value="DISPLAY_RST"/>
     <symbolicName propertyId="p104.symbolic_name" value="QSPI_IO2"/>
-    <symbolicName propertyId="p105.symbolic_name" value="ARDUINO_D3"/>
+    <symbolicName propertyId="p105.symbolic_name" value="DISPLAY_BUSY"/>
     <symbolicName propertyId="p106.symbolic_name" value="ARDUINO_D4"/>
     <symbolicName propertyId="p107.symbolic_name" value="ARDUINO_D7"/>
     <symbolicName propertyId="p111.symbolic_name" value="ARDUINO_D5_MIKROBUS_PWM"/>
@@ -380,13 +380,15 @@
       <configSetting altId="p101.sci0.txd" configurationId="p101"/>
       <configSetting altId="p101.gpio_mode.gpio_mode_peripheral" configurationId="p101.gpio_mode"/>
       <configSetting altId="p102.output.low" configurationId="p102"/>
+      <configSetting altId="p102.gpio_speed.gpio_speed_medium" configurationId="p102.gpio_drivecapacity"/>
       <configSetting altId="p102.gpio_mode.gpio_mode_out.low" configurationId="p102.gpio_mode"/>
       <configSetting altId="p103.output.low" configurationId="p103"/>
+      <configSetting altId="p103.gpio_speed.gpio_speed_medium" configurationId="p103.gpio_drivecapacity"/>
       <configSetting altId="p103.gpio_mode.gpio_mode_out.low" configurationId="p103.gpio_mode"/>
       <configSetting altId="p104.qspi0.qio2" configurationId="p104"/>
       <configSetting altId="p104.gpio_mode.gpio_mode_peripheral" configurationId="p104.gpio_mode"/>
-      <configSetting altId="p105.output.low" configurationId="p105"/>
-      <configSetting altId="p105.gpio_mode.gpio_mode_out.low" configurationId="p105.gpio_mode"/>
+      <configSetting altId="p105.input" configurationId="p105"/>
+      <configSetting altId="p105.gpio_mode.gpio_mode_in" configurationId="p105.gpio_mode"/>
       <configSetting altId="p106.output.low" configurationId="p106"/>
       <configSetting altId="p106.gpio_mode.gpio_mode_out.low" configurationId="p106.gpio_mode"/>
       <configSetting altId="p107.output.low" configurationId="p107"/>

@@ -77,6 +77,7 @@ if(CMAKE_BUILD_ARCH STREQUAL "ARM")
 
     file(GLOB_RECURSE SOURCE_LIST
         "${CMAKE_CURRENT_SOURCE_DIR}/fw/src/prj/*.c"
+        "${CMAKE_CURRENT_SOURCE_DIR}/fw/src/prj/*.cpp"
         "${CMAKE_CURRENT_SOURCE_DIR}/fw/src/prj/*.h"
     )
 

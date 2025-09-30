@@ -71,7 +71,7 @@
       <configSetting altId="p008.input" configurationId="p008"/>
       <configSetting altId="p102.output.low" configurationId="p102"/>
       <configSetting altId="p103.output.low" configurationId="p103"/>
-      <configSetting altId="p105.output.low" configurationId="p105"/>
+      <configSetting altId="p105.input" configurationId="p105"/>
       <configSetting altId="p106.output.low" configurationId="p106"/>
       <configSetting altId="p107.output.low" configurationId="p107"/>
       <configSetting altId="p114.output.low" configurationId="p114"/>
