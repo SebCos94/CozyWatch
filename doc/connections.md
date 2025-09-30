@@ -6,9 +6,9 @@
 | P105 - DISPLAY_BUSY | BUSY                       | No      |
 | P103 - DISPLAY_RST  | RST                        | Yes     |
 | P102 - DISPLAY_DC   | DC                         | Yes     |
-| P413 - CS           | CS                         | No      |
-| P412 - CLK          | CLK                        | No      |
-| P101 - MOSI         | DIN                        | No      |
+| P413 - CS           | CS                         | Yes     |
+| P412 - CLK          | CLK                        | Yes     |
+| P411 - MOSI         | DIN                        | Yes     |
 | GND                 | GND                        | Yes     |
 | 3v3                 | VCC                        | Yes     |
-| P100 - MISO         | --                         | No      |
+| P410 - MISO         | --                         | Yes     |
