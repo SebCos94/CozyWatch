@@ -124,8 +124,8 @@ FSP Configuration
       P013 86 - - - - Disabled - - "ADC0: AN011; ANALOG0: VREFL" - None - - 
       P014 85 ADC0_AN012 ARDUINO_A4 - - "Analog mode" - None "ADC0: AN012; DAC0: DA0" - IO - - 
       P015 84 ADC0_AN013 ARDUINO_A5 - - "Analog mode" - None "ADC0: AN013; DAC1: DA1; ICU0: IRQ13" - IO - - 
-      P100 75 SCI0_RXD0 SPI_MISO Low None "Peripheral mode" CMOS None "AGT0: AGTIO0; GPT_POEG0: GTETRGA; GPT5: GTIOC5B; ICU0: IRQ02; QSPI0: QSPCLK; SCI0: RXD0; SCI0: SCL0; SCI1: SCK1" - IO - - 
-      P101 74 SCI0_TXD0 SPI_MOSI Low None "Peripheral mode" CMOS None "AGT0: AGTEE0; GPT_POEG1: GTETRGB; GPT5: GTIOC5A; ICU0: IRQ01; QSPI0: QIO1; SCI0: SDA0; SCI0: TXD0; SCI1: CTSRTS1" - IO - - 
+      P100 75 - - - - Disabled - - "AGT0: AGTIO0; GPT_POEG0: GTETRGA; GPT5: GTIOC5B; ICU0: IRQ02; QSPI0: QSPCLK; SCI0: RXD0; SCI0: SCL0; SCI1: SCK1" - None - - 
+      P101 74 - - - - Disabled - - "AGT0: AGTEE0; GPT_POEG1: GTETRGB; GPT5: GTIOC5A; ICU0: IRQ01; QSPI0: QIO1; SCI0: SDA0; SCI0: TXD0; SCI1: CTSRTS1" - None - - 
       P102 73 GPIO DISPLAY_DC Medium - "Output mode (Initial Low)" CMOS - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT_OPS0: GTOWLO; GPT2: GTIOC2B; QSPI0: QIO0; SCI0: SCK0" - IO - - 
       P103 72 GPIO DISPLAY_RST Medium - "Output mode (Initial Low)" CMOS - "AGT2: AGTIO2; CAN0: CTX0; GPT_OPS0: GTOWUP; GPT2: GTIOC2A; QSPI0: QIO3; SCI0: CTSRTS0" - IO - - 
       P104 71 QSPI0_QIO2 QSPI_IO2 Low None "Peripheral mode" CMOS None "AGT2: AGTEE2; GPT_POEG1: GTETRGB; GPT1: GTIOC1B; ICU0: IRQ01; QSPI0: QIO2" - IO - - 
@@ -170,10 +170,10 @@ FSP Configuration
       P407 25 - - - - Disabled - - "ADC0: ADTRG0; AGT0: AGTIO0; CTSU0: TS03; GPT6: GTIOC6A; IIC0: SDA0; RTC0: RTCOUT; SCI4: CTSRTS4; SPI0: SSLA3; USB_FS0: USB_VBUS" - None - - 
       P408 24 SCI3_SCL3 GROVE1_SCL_QWIIC_SCL Low None "Peripheral mode" "n-ch open drain" None "AGT2: AGTOB2; CTSU0: TS04; GPT_OPS0: GTOWLO; GPT6: GTIOC6B; ICU0: IRQ07; IIC0: SCL0; SCI3: RXD3; SCI3: SCL3; SCI4: CTS4; USB_FS0: USB_ID" - IO - - 
       P409 23 SCI3_SDA3 GROVE1_SDA_QWIIC_SDA Low None "Peripheral mode" "n-ch open drain" None "AGT2: AGTOA2; CTSU0: TS05; GPT_OPS0: GTOWUP; ICU0: IRQ06; SCI3: SDA3; SCI3: TXD3; USB_FS0: USB_EXICEN" - IO - - 
-      P410 22 - - - - Disabled - - "AGT1: AGTOB1; CTSU0: TS06; GPT_OPS0: GTOVLO; ICU0: IRQ05; SCI0: RXD0; SCI0: SCL0; SCI3: SCK3; SDHI0: SD0DAT1" - None - - 
-      P411 21 - - - - Disabled - - "AGT1: AGTOA1; CTSU0: TS07; GPT_OPS0: GTOVUP; ICU0: IRQ04; SCI0: SDA0; SCI0: TXD0; SCI3: CTSRTS3; SDHI0: SD0DAT0" - None - - 
+      P410 22 SCI0_RXD0 SPI_MISO Low None "Peripheral mode" CMOS None "AGT1: AGTOB1; CTSU0: TS06; GPT_OPS0: GTOVLO; ICU0: IRQ05; SCI0: RXD0; SCI0: SCL0; SCI3: SCK3; SDHI0: SD0DAT1" - IO - - 
+      P411 21 SCI0_TXD0 SPI_MOSI Low None "Peripheral mode" CMOS None "AGT1: AGTOA1; CTSU0: TS07; GPT_OPS0: GTOVUP; ICU0: IRQ04; SCI0: SDA0; SCI0: TXD0; SCI3: CTSRTS3; SDHI0: SD0DAT0" - IO - - 
       P412 20 SCI0_SCK0 SPI_CLK Low - "Peripheral mode" CMOS None "AGT1: AGTEE1; CTSU0: TS08; GPT_OPS0: GTOULO; SCI0: SCK0; SCI3: CTS3; SDHI0: SD0CMD" - IO - - 
-      P413 19 SCI0_CTSRTS0 SPI_CS Low - "Peripheral mode" CMOS None "AGT3: AGTEE3; CTSU0: TS09; GPT_OPS0: GTOUUP; SCI0: CTSRTS0; SDHI0: SD0CLK" - IO - - 
+      P413 19 GPIO SPI_CS Medium - "Output mode (Initial High)" CMOS - "AGT3: AGTEE3; CTSU0: TS09; GPT_OPS0: GTOUUP; SCI0: CTSRTS0; SDHI0: SD0CLK" - IO - - 
       P414 18 GPIO PMOD2_INT - IRQ09 "Input mode" - "input pull-up" "AGT5: AGTIO5; CTSU0: TS10; GPT0: GTIOC0B; ICU0: IRQ09; SCI0: CTS0; SDHI0: SD0WP" - IO - - 
       P415 17 GPIO LED1 Low None "Output mode (Initial Low)" CMOS - "AGT4: AGTIO4; CTSU0: TS11; GPT0: GTIOC0A; ICU0: IRQ08; SDHI0: SD0CD; USB_FS0: USB_VBUSEN" - IO - - 
       P500 76 - - - - Disabled - - "ADC0: AN016; AGT0: AGTOA0; CAC0: CACREF; GPT_OPS0: GTIU; QSPI0: QSPCLK; USB_FS0: USB_VBUSEN" - None - - 
@@ -225,8 +225,8 @@ FSP Configuration
       P013 86 - - - - Disabled - - "ADC0: AN011; ANALOG0: VREFL" - None - - 
       P014 85 - ARDUINO_A4 - - Disabled - None "ADC0: AN012; DAC0: DA0" - IO - - 
       P015 84 - ARDUINO_A5 - - Disabled - None "ADC0: AN013; DAC1: DA1; ICU0: IRQ13" - IO - - 
-      P100 75 - SPI_MISO Low None Disabled CMOS None "AGT0: AGTIO0; GPT_POEG0: GTETRGA; GPT5: GTIOC5B; ICU0: IRQ02; QSPI0: QSPCLK; SCI0: RXD0; SCI0: SCL0; SCI1: SCK1" - IO - - 
-      P101 74 - SPI_MOSI Low None Disabled CMOS None "AGT0: AGTEE0; GPT_POEG1: GTETRGB; GPT5: GTIOC5A; ICU0: IRQ01; QSPI0: QIO1; SCI0: SDA0; SCI0: TXD0; SCI1: CTSRTS1" - IO - - 
+      P100 75 - - - - Disabled - - "AGT0: AGTIO0; GPT_POEG0: GTETRGA; GPT5: GTIOC5B; ICU0: IRQ02; QSPI0: QSPCLK; SCI0: RXD0; SCI0: SCL0; SCI1: SCK1" - None - - 
+      P101 74 - - - - Disabled - - "AGT0: AGTEE0; GPT_POEG1: GTETRGB; GPT5: GTIOC5A; ICU0: IRQ01; QSPI0: QIO1; SCI0: SDA0; SCI0: TXD0; SCI1: CTSRTS1" - None - - 
       P102 73 - DISPLAY_DC Low - Disabled CMOS - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT_OPS0: GTOWLO; GPT2: GTIOC2B; QSPI0: QIO0; SCI0: SCK0" - IO - - 
       P103 72 - DISPLAY_RST Low - Disabled CMOS - "AGT2: AGTIO2; CAN0: CTX0; GPT_OPS0: GTOWUP; GPT2: GTIOC2A; QSPI0: QIO3; SCI0: CTSRTS0" - IO - - 
       P104 71 - QSPI_IO2 Low None Disabled CMOS None "AGT2: AGTEE2; GPT_POEG1: GTETRGB; GPT1: GTIOC1B; ICU0: IRQ01; QSPI0: QIO2" - IO - - 
@@ -271,10 +271,10 @@ FSP Configuration
       P407 25 - - - - Disabled - - "ADC0: ADTRG0; AGT0: AGTIO0; CTSU0: TS03; GPT6: GTIOC6A; IIC0: SDA0; RTC0: RTCOUT; SCI4: CTSRTS4; SPI0: SSLA3; USB_FS0: USB_VBUS" - None - - 
       P408 24 - GROVE1_SCL_QWIIC_SCL Low None Disabled CMOS None "AGT2: AGTOB2; CTSU0: TS04; GPT_OPS0: GTOWLO; GPT6: GTIOC6B; ICU0: IRQ07; IIC0: SCL0; SCI3: RXD3; SCI3: SCL3; SCI4: CTS4; USB_FS0: USB_ID" - IO - - 
       P409 23 - GROVE1_SDA_QWIIC_SDA Low None Disabled CMOS None "AGT2: AGTOA2; CTSU0: TS05; GPT_OPS0: GTOWUP; ICU0: IRQ06; SCI3: SDA3; SCI3: TXD3; USB_FS0: USB_EXICEN" - IO - - 
-      P410 22 - - - - Disabled - - "AGT1: AGTOB1; CTSU0: TS06; GPT_OPS0: GTOVLO; ICU0: IRQ05; SCI0: RXD0; SCI0: SCL0; SCI3: SCK3; SDHI0: SD0DAT1" - None - - 
-      P411 21 - - - - Disabled - - "AGT1: AGTOA1; CTSU0: TS07; GPT_OPS0: GTOVUP; ICU0: IRQ04; SCI0: SDA0; SCI0: TXD0; SCI3: CTSRTS3; SDHI0: SD0DAT0" - None - - 
+      P410 22 - SPI_MISO Low None Disabled CMOS None "AGT1: AGTOB1; CTSU0: TS06; GPT_OPS0: GTOVLO; ICU0: IRQ05; SCI0: RXD0; SCI0: SCL0; SCI3: SCK3; SDHI0: SD0DAT1" - IO - - 
+      P411 21 - SPI_MOSI Low None Disabled CMOS None "AGT1: AGTOA1; CTSU0: TS07; GPT_OPS0: GTOVUP; ICU0: IRQ04; SCI0: SDA0; SCI0: TXD0; SCI3: CTSRTS3; SDHI0: SD0DAT0" - IO - - 
       P412 20 - SPI_CLK Low - Disabled CMOS None "AGT1: AGTEE1; CTSU0: TS08; GPT_OPS0: GTOULO; SCI0: SCK0; SCI3: CTS3; SDHI0: SD0CMD" - IO - - 
-      P413 19 - SPI_CS Low - Disabled CMOS None "AGT3: AGTEE3; CTSU0: TS09; GPT_OPS0: GTOUUP; SCI0: CTSRTS0; SDHI0: SD0CLK" - IO - - 
+      P413 19 - SPI_CS Low - Disabled CMOS - "AGT3: AGTEE3; CTSU0: TS09; GPT_OPS0: GTOUUP; SCI0: CTSRTS0; SDHI0: SD0CLK" - IO - - 
       P414 18 - PMOD2_INT - None Disabled - None "AGT5: AGTIO5; CTSU0: TS10; GPT0: GTIOC0B; ICU0: IRQ09; SCI0: CTS0; SDHI0: SD0WP" - IO - - 
       P415 17 - LED1 Low None Disabled CMOS - "AGT4: AGTIO4; CTSU0: TS11; GPT0: GTIOC0A; ICU0: IRQ08; SDHI0: SD0CD; USB_FS0: USB_VBUSEN" - IO - - 
       P500 76 - - - - Disabled - - "ADC0: AN016; AGT0: AGTOA0; CAC0: CACREF; GPT_OPS0: GTIU; QSPI0: QSPCLK; USB_FS0: USB_VBUSEN" - None - - 
@@ -341,21 +341,21 @@ FSP Configuration
       4th Port ELC Trigger Source: Disabled
       Pin Configuration Name: g_bsp_pin_cfg
       
-    Instance "g_spi0 SPI (r_sci_spi)"
-      Name: g_spi0
+    Instance "g_spi SPI (r_sci_spi)"
+      Name: g_spi
       Channel: 0
       Operating Mode: Master
-      Clock Phase: Data sampling on odd edge, data variation on even edge
+      Clock Phase: Data sampling on even edge, data variation on odd edge
       Clock Polarity: Low when idle
       Mode Fault Error: Disable
       Bit Order: MSB First
       Callback: sci_spi_callback
-      Receive Interrupt Priority: Priority 12
-      Transmit Interrupt Priority: Priority 12
-      Transmit End Interrupt Priority: Priority 12
-      Error Interrupt Priority: Priority 12
-      Bitrate: 8000000
-      Bitrate Modulation: Disabled
+      Receive Interrupt Priority: Priority 2
+      Transmit Interrupt Priority: Priority 2
+      Transmit End Interrupt Priority: Priority 2
+      Error Interrupt Priority: Priority 2
+      Bitrate: 50000
+      Bitrate Modulation: Enabled
       
       Instance "g_transfer0 Transfer (r_dtc) SCI0 TXI (Transmit data empty)"
         Name: g_transfer0

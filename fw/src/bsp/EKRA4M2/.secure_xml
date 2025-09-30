@@ -82,6 +82,7 @@
       <configSetting altId="p404.output.low" configurationId="p404"/>
       <configSetting altId="p405.output.low" configurationId="p405"/>
       <configSetting altId="p406.output.low" configurationId="p406"/>
+      <configSetting altId="p413.output.high" configurationId="p413"/>
       <configSetting altId="p414.input" configurationId="p414"/>
       <configSetting altId="p415.output.low" configurationId="p415"/>
       <configSetting altId="p502.input" configurationId="p502"/>
@@ -94,10 +95,9 @@
       <configSetting altId="qspi0.qio3.p505" configurationId="qspi0.qio3" peripheral="QSPI0"/>
       <configSetting altId="qspi0.qspclk.p305" configurationId="qspi0.qspclk" peripheral="QSPI0"/>
       <configSetting altId="qspi0.qssl.p306" configurationId="qspi0.qssl" peripheral="QSPI0"/>
-      <configSetting altId="sci0.ctsrts.p413" configurationId="sci0.ctsrts" isUsedByDriver="true" peripheral="SCI0"/>
-      <configSetting altId="sci0.rxd.p100" configurationId="sci0.rxd" isUsedByDriver="true" peripheral="SCI0"/>
+      <configSetting altId="sci0.rxd.p410" configurationId="sci0.rxd" isUsedByDriver="true" peripheral="SCI0"/>
       <configSetting altId="sci0.sck.p412" configurationId="sci0.sck" isUsedByDriver="true" peripheral="SCI0"/>
-      <configSetting altId="sci0.txd.p101" configurationId="sci0.txd" isUsedByDriver="true" peripheral="SCI0"/>
+      <configSetting altId="sci0.txd.p411" configurationId="sci0.txd" isUsedByDriver="true" peripheral="SCI0"/>
       <configSetting altId="sci2.scl.p113" configurationId="sci2.scl" peripheral="SCI2"/>
       <configSetting altId="sci2.sda.p112" configurationId="sci2.sda" peripheral="SCI2"/>
       <configSetting altId="sci3.scl.p408" configurationId="sci3.scl" peripheral="SCI3"/>
