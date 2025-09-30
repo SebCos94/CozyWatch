@@ -288,8 +288,8 @@
     <symbolicName propertyId="p008.symbolic_name" value="PMOD1_INT"/>
     <symbolicName propertyId="p014.symbolic_name" value="ARDUINO_A4"/>
     <symbolicName propertyId="p015.symbolic_name" value="ARDUINO_A5"/>
-    <symbolicName propertyId="p100.symbolic_name" value="ARDUINO_RX_MIKROBUS_RX"/>
-    <symbolicName propertyId="p101.symbolic_name" value="ARDUINO_TX_MIKROBUS_TX"/>
+    <symbolicName propertyId="p100.symbolic_name" value="SPI_MISO"/>
+    <symbolicName propertyId="p101.symbolic_name" value="SPI_MOSI"/>
     <symbolicName propertyId="p102.symbolic_name" value="DISPLAY_DC"/>
     <symbolicName propertyId="p103.symbolic_name" value="DISPLAY_RST"/>
     <symbolicName propertyId="p104.symbolic_name" value="QSPI_IO2"/>
@@ -316,7 +316,8 @@
     <symbolicName propertyId="p406.symbolic_name" value="PMOD1_IO2"/>
     <symbolicName propertyId="p408.symbolic_name" value="GROVE1_SCL_QWIIC_SCL"/>
     <symbolicName propertyId="p409.symbolic_name" value="GROVE1_SDA_QWIIC_SDA"/>
-    <symbolicName propertyId="p413.symbolic_name" value="PMOD2_SS1"/>
+    <symbolicName propertyId="p412.symbolic_name" value="SPI_CLK"/>
+    <symbolicName propertyId="p413.symbolic_name" value="SPI_CS"/>
     <symbolicName propertyId="p414.symbolic_name" value="PMOD2_INT"/>
     <symbolicName propertyId="p415.symbolic_name" value="LED1"/>
     <symbolicName propertyId="p502.symbolic_name" value="MIKROBUS_INT"/>
