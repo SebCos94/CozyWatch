@@ -1,45 +1,69 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# ------------------------------
+# Build artifacts and intermediates
+# ------------------------------
 *.o
 *.obj
+*.lo
+*.slo
+*.d
+*.dwo
+*.log
 
-# Precompiled Headers
+# ------------------------------
+# Precompiled headers
+# ------------------------------
 *.gch
 *.pch
 
-# Linker files
+# ------------------------------
+# Linker and debug files
+# ------------------------------
 *.ilk
-
-# Debugger Files
 *.pdb
 
-# Compiled Dynamic libraries
+# ------------------------------
+# Libraries
+# ------------------------------
+*.a
+*.la
+*.lai
+*.lib
 *.so
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
+# ------------------------------
 # Executables
+# ------------------------------
 *.exe
 *.out
 *.app
 
-# debug information files
-*.dwo
+# ------------------------------
+# Fortran modules
+# ------------------------------
+*.mod
+*.smod
 
-# output
-build/
+# ------------------------------
+# IDE / Tool specific
+# ------------------------------
 .settings/
+.vscode/
+.idea/
+
+# ------------------------------
+# Build directories
+# ------------------------------
+build/
+*/build/
+Debug/
+*/Debug/
+Release/
+*/Release/
+
+# ------------------------------
+# OS-specific junk
+# ------------------------------
+.DS_Store
+Thumbs.db
